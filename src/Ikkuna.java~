@@ -1,0 +1,46 @@
+import java.awt.Color;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+
+public class Ikkuna extends JFrame{
+	private JFrame kehys;
+	private JLabel label;
+	private Color taustavari;
+	
+	public Ikkuna(){
+		this.taustavari = new Color(181,171,119);
+		
+		this.kehys = new JFrame("Teekkarintahti");
+		this.kehys.setLayout(null);
+		
+		this.kehys.setSize(660, 629);
+		this.setBackground(Color.BLACK);
+		this.setForeground(Color.black);
+		
+	
+		
+		this.label = new JLabel();
+		
+		this.label.setIcon(new ImageIcon("karttaa.png"));
+		this.label.setBounds(0, 0, 581, 629);
+		this.label.setVisible(true);
+		this.kehys.add(this.label);
+	
+		this.kehys.setVisible(true);
+		
+		
+		
+		this.kehys.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		
+		
+	}
+	public static void main (String[] args){
+		new Ikkuna();
+	}
+	
+}
